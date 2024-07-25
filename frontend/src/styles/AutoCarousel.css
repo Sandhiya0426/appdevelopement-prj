@@ -1,0 +1,26 @@
+
+
+.car {
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center the carousel */
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto; /* Ensure the image maintains its aspect ratio */
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+    filter: brightness(0) invert(1); /* Optional: change arrow color */
+  }
+  
+  /* Optional: Style the indicators */
+  .carousel-indicators li {
+    background-color: #fff; /* Change indicator color */
+  }
+  
+  .carousel-indicators .active {
+    background-color: #000; /* Color for the active indicator */
+  }
+  

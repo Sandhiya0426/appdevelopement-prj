@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
  import '../styles/Login.css'; 
 
 function Login() {
@@ -79,7 +79,7 @@ function Login() {
             </form>
             {message && <p className="message">{message}</p>}
             <p>
-                {/* Don't have an account? <Link to="/register">Register</Link> */}
+                Don't have an account? <Link to="/register">Register</Link>
             </p>
         </div>
     );
