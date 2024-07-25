@@ -1,11 +1,10 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importing Bootstrap CSS
-import '../assets/styles/AutoCarousel.css'; // Make sure this path is correct
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import '../assets/styles/AutoCarousel.css'; 
 
-// Import images
-import imgwed2 from '../assets/imgwed2.jpeg';
-import imgwed3 from '../assets/imgwed3.jpg';
+import imgwed2 from '../assets/styles/imgwed2.jpeg';
+import imgwed3 from '../assets/styles/imgwed3.jpg';
 
 const images = [imgwed2, imgwed3];
 
