@@ -10,7 +10,7 @@
     width: 100%;
     height: auto; /* Ensure the image maintains its aspect ratio */
   }
-  
+
   .carousel-control-prev, .carousel-control-next {
     filter: brightness(0) invert(1); /* Optional: change arrow color */
   }
