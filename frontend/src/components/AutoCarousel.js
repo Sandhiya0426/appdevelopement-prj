@@ -3,10 +3,11 @@ import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import '../assets/styles/AutoCarousel.css'; 
 
-import imgwed2 from '../assets/styles/imgwed2.jpeg';
-import imgwed3 from '../assets/styles/imgwed3.jpg';
+import imgwed2 from '../assets/images/imgwed2.jpeg';
+// import imgwed3 from '../assets/images/imgwed3.jpg';
+ import imgwed5 from '../assets/images/imgwed5.jpg';
 
-const images = [imgwed2, imgwed3];
+const images = [imgwed2,imgwed5];
 
 const AutoCarousel = () => {
   return (

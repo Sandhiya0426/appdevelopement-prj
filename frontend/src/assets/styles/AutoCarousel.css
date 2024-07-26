@@ -1,27 +1,84 @@
-
-
 .car {
-    width: 100%;
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto; /* Center the carousel */
-    
+  width: 100%;
+  max-width: 800px; /* Limit the maximum width for a medium size */
+  margin: 0 auto; /* Center the carousel */
+  padding: 20px; /* Add some padding for better spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  background-color: #ffffff; /* White background for a clean look */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensure content stays within rounded corners */
+}
+
+.carousel-item img {
+  width: 100%; /* Ensure the image takes the full width of the container */
+  height: 400px; /* Set a fixed height for the images */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  border-radius: 10px; /* Optional: rounded corners to match the container */
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  filter: brightness(0) invert(1); /* Change arrow color */
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+  width: 40px; /* Adjust the width of the control */
+  height: 40px; /* Adjust the height of the control */
+  border-radius: 50%; /* Make the controls circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%; /* Center the controls vertically */
+  transform: translateY(-50%); /* Center the controls vertically */
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+.carousel-indicators li {
+  background-color: #fff; /* Change indicator color */
+  width: 10px; /* Adjust the size of the indicators */
+  height: 10px; /* Adjust the size of the indicators */
+  border-radius: 50%; /* Make indicators circular */
+  margin: 0 5px; /* Add spacing between indicators */
+}
+
+.carousel-indicators .active {
+  background-color: #000; /* Color for the active indicator */
+}
+
+@media (max-width: 768px) {
+  .car {
+      max-width: 100%; /* Full width on smaller screens */
+      padding: 10px; /* Reduce padding for smaller screens */
   }
-  
+
   .carousel-item img {
-    width: 100%;
-    height: auto; /* Ensure the image maintains its aspect ratio */
+      height: 300px; /* Adjust height for smaller screens */
   }
 
   .carousel-control-prev, .carousel-control-next {
-    filter: brightness(0) invert(1); /* Optional: change arrow color */
+      width: 30px; /* Smaller controls on smaller screens */
+      height: 30px; /* Smaller controls on smaller screens */
   }
-  
-  /* Optional: Style the indicators */
-  .carousel-indicators li {
-    background-color: #fff; /* Change indicator color */
+}
+
+@media (max-width: 480px) {
+  .carousel-item img {
+      height: 200px; /* Further adjust height for very small screens */
   }
-  
-  .carousel-indicators .active {
-    background-color: #000; /* Color for the active indicator */
+
+  .carousel-caption {
+      font-size: 14px; /* Smaller text for very small screens */
+      padding: 5px 10px; /* Adjust padding for very small screens */
   }
-  
+}
