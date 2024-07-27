@@ -1,30 +1,42 @@
+/* AutoCarousel.css */
 .car {
-  width: 100%;
-  max-width: 800px; /* Limit the maximum width for a medium size */
-  margin: 0 auto; /* Center the carousel */
-  padding: 20px; /* Add some padding for better spacing */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
-  background-color: #ffffff; /* White background for a clean look */
-  border-radius: 10px; /* Rounded corners */
-  overflow: hidden; /* Ensure content stays within rounded corners */
+  width: 100%; /* Full width */
+  height: 75vh; /* 75% of viewport height */
+  margin: 0 auto; /* Center the carousel horizontally */
+  padding: 0; /* Remove padding */
+  box-shadow: none; /* Remove box shadow if not needed */
+  background-color: transparent; /* Transparent background */
+  border-radius: 0; /* No rounded corners */
+  overflow: hidden; /* Ensure content stays within container */
+  position: relative; /* Position relative for absolute positioning of controls */
 }
 
 .carousel-item img {
-  width: 100%; /* Ensure the image takes the full width of the container */
-  height: 400px; /* Set a fixed height for the images */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height of the carousel container */
   object-fit: cover; /* Cover the container while maintaining aspect ratio */
-  border-radius: 10px; /* Optional: rounded corners to match the container */
+  border-radius: 0; /* No rounded corners */
 }
 
 .carousel-caption {
   position: absolute;
-  top: 50%;
+  bottom: 30px; /* Adjust vertical positioning from the bottom */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   color: white;
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 10px; /* Rounded corners for the caption */
+  text-align: center;
+  margin-bottom: 30px; /* Center-align the text */
+}
+
+.carousel-caption h3 {
+  margin-bottom: 5px; /* Space between heading and text */
+}
+
+.carousel-caption p {
+  margin: 0; /* Remove default margin */
 }
 
 .carousel-control-prev, .carousel-control-next {
@@ -38,6 +50,15 @@
   justify-content: center;
   top: 50%; /* Center the controls vertically */
   transform: translateY(-50%); /* Center the controls vertically */
+  z-index: 1000; /* Ensure controls are above other content */
+}
+
+.carousel-control-prev {
+  left: 20px; /* Position the left arrow from the left edge */
+}
+
+.carousel-control-next {
+  right: 20px; /* Position the right arrow from the right edge */
 }
 
 .carousel-control-prev:hover, .carousel-control-next:hover {
@@ -58,12 +79,7 @@
 
 @media (max-width: 768px) {
   .car {
-      max-width: 100%; /* Full width on smaller screens */
       padding: 10px; /* Reduce padding for smaller screens */
-  }
-
-  .carousel-item img {
-      height: 300px; /* Adjust height for smaller screens */
   }
 
   .carousel-control-prev, .carousel-control-next {
@@ -77,8 +93,30 @@
       height: 200px; /* Further adjust height for very small screens */
   }
 
-  .carousel-caption {
+  /* .carousel-caption {
       font-size: 14px; /* Smaller text for very small screens */
-      padding: 5px 10px; /* Adjust padding for very small screens */
+      /* padding: 5px 10px; */
+      /* margin-top: 50px; /* Adjust padding for very small screens */
+  /* }  */
+  .carousel-caption {
+    position: absolute;
+    top: 10%; /* Adjust this value to move the caption upwards */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the caption horizontally and adjust vertical positioning */
+    background-color: rgba(0, 0, 0, 0.457); /* Semi-transparent background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px; /* Rounded corners for the caption */
+    text-align: center;
+    width: fit-content; /* Adjust width as needed */
   }
+  
+  .carousel-caption h3 {
+    margin-bottom: 1px; /* Space between heading and text */
+  }
+  
+  .carousel-caption p {
+    margin: 0; /* Remove default margin */
+  }
+  
 }
