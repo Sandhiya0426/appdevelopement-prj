@@ -1,0 +1,36 @@
+/* src/assets/styles/Dashboard.css */
+.dashboard {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard h2 {
+  margin-bottom: 20px;
+}
+
+.dashboard .recent-orders,
+.dashboard .recent-customers {
+  margin-bottom: 20px;
+}
+
+.dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard table th,
+.dashboard table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.dashboard table th {
+  background-color: #f4f4f4;
+  text-align: left;
+}
+
+.dashboard table td {
+  background-color: #fff;
+}

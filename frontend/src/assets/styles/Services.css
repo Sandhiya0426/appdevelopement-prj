@@ -1,0 +1,49 @@
+/* src/assets/styles/Services.css */
+.services {
+    padding: 40px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.services h1 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.2s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #ff5e57; /* Change the color as needed */
+}
+
+.service-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #666; /* Provide a complete color code */
+}

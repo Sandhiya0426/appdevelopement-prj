@@ -1,4 +1,11 @@
 /* Login.css */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('C:\Users\sandh\Downloads\login-.jpeg') no-repeat center center fixed; 
+    background-size: cover;
+} 
 
 .login-container {
     max-width: 400px;
@@ -6,7 +13,10 @@
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #f9f9f9;
+  
+    background-color: rgba(249, 249, 249, 0.9); /* Semi-transparent background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
 }
 
 .login-container h1 {

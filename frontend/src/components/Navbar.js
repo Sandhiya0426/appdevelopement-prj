@@ -12,7 +12,7 @@ function Navbar() {
                 <Link to="/">Home</Link>
                  <Link to="/Login">Login</Link>
                  <Link to="/Register">Register</Link>
-                 <li><Link to="/admin">Admin Panel</Link></li>
+                 {/* <li><Link to="/admin/dashboard">Admin Panel</Link></li> */}
                 <Link to="/services">Services</Link>
                 <Link to="/contact">Contact</Link>
             </div>

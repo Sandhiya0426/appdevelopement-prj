@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
- import '../assets/styles/Login.css'; 
+import { useNavigate, Link } from "react-router-dom";
+import '../assets/styles/Login.css'; 
 
 function Login() {
     const [formData, setFormData] = useState({
@@ -9,6 +9,7 @@ function Login() {
     });
     const [errors, setErrors] = useState({});
     const [message, setMessage] = useState('');
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -40,20 +41,29 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validate()) {
-            const storedUser = JSON.parse(localStorage.getItem('user'));
-            if (storedUser && storedUser.email === formData.email && storedUser.password === formData.password) {
-                setMessage("Login successful!");
-                console.log("Login successful:", formData);
+            if (formData.email === 'admin@gmail.com' && formData.password === '1234admin') {
+                setMessage("Admin login successful!");
+                navigate('/adminpanel'); // Redirect to admin panel
+            } else if (formData.email === 'user@gmail.com' && formData.password === '123user') {
+                setMessage("User login successful!");
+                navigate('/userpanel'); // Redirect to user panel
             } else {
-                setMessage("Invalid email or password.");
-                console.log("Invalid email or password:", formData);
+                const storedUser = JSON.parse(localStorage.getItem('user'));
+                if (storedUser && storedUser.email === formData.email && storedUser.password === formData.password) {
+                    setMessage("Login successful!");
+                    navigate('/dashboard'); // Redirect to user dashboard
+                } else {
+                    setMessage("Invalid email or password.");
+                }
             }
         }
     };
 
     return (
         <div className="login-container">
+
             <h1>Login</h1>
+          
             <form onSubmit={handleSubmit}>
                 <label>Email</label>
                 <input
@@ -81,7 +91,9 @@ function Login() {
             <p>
                 Don't have an account? <Link to="/register">Register</Link>
             </p>
-        </div>
+            </div>
+    
+     
     );
 }
 

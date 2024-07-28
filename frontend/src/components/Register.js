@@ -75,28 +75,28 @@ function Register() {
                 />
                 {errors.name && <span className="error">{errors.name}</span>}
                 
-                <label>Date of Birth</label>
+                <label>Date of event</label>
                 <input
                     type="date"
                     placeholder="Enter your date of birth"
-                    name="dateOfBirth"
+                    name="dateOfevent"
                     value={formData.dateOfBirth}
                     onChange={handleChange}
                 />
-                {errors.dateOfBirth && <span className="error">{errors.dateOfBirth}</span>}
+                {errors.dateOfevent && <span className="error">{errors.dateOfevent}</span>}
                 
-                <label>Gender</label>
+                {/* <label>Gender</label>
                 <select
                     name="gender"
                     value={formData.gender}
                     onChange={handleChange}
-                >
-                    <option value="">Select gender</option>
+                > */}
+                    {/* <option value="">Select gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other</option>
-                </select>
-                {errors.gender && <span className="error">{errors.gender}</span>}
+                </select> */}
+                {/* {errors.gender && <span className="error">{errors.gender}</span>} */}
                 
                 <label>Email</label>
                 <input

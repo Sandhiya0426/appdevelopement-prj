@@ -3,23 +3,26 @@ import React from 'react';
 import '../assets/styles/Home.css';
 import AutoCarousel from './AutoCarousel';
 import Card from './Card';
+import Footer from './Footer'; // Import the Footer component
+
 
 // Import images from assets
- import weddingImage from '../assets/images/wedding-organizers.jpg';
- import corporateImage from '../assets/images/roadshow-event.jpg'; 
-import birthdayImage from '../assets/images/birthday-party-planner.jpg'; 
-// import roadImage from '../assets/images/roadshow-event.jpg'; 
+import weddingImage from '../assets/images/wedding-organizers.jpg';
+import corporateImage from '../assets/images/roadshow-event.jpg';
+import birthdayImage from '../assets/images/birthday-party-planner.jpg';
+// import roadImage from '../assets/images/roadshow-event.jpg';
 
 function Home() {
   return (
     <div>
+         <div className="new">
       <AutoCarousel />
       <center><h1 className='wel'>Welcome to V3EVENTS</h1></center>
       <center><h4 className='hel'>Best Wedding & Event Management Company</h4></center>
-      
+   
       <div className="card-container">
         <Card
-          title="wedding organizers"
+          title="wedding-organizers"
           text="Let us handle your wedding planning with expertise and care."
           imageUrl={weddingImage}
         />
@@ -39,6 +42,8 @@ function Home() {
           imageUrl={roadImage}
         /> */}
       </div>
+      <Footer /> {/* Add the Footer component */}
+    </div>
     </div>
   );
 }
