@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.list-of-companies {
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8eef4;
+  text-align: center;
+}
+
+.list-of-companies h1 {
+  margin-bottom: 20px;
+  color: #221d1d;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.companies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.company-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.company-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.company-card h2 {
+  margin-top: 0;
+  font-size: 1.6em;
+  color: #333;
+  font-weight: 500;
+}
+
+.company-card p {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #555;
+  text-align: center;
+}
+
+.view-button {
+  background: linear-gradient(to right, #007BFF, #0056b3);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px; /* Add some space between text and button */
+}
+
+.view-button:hover {
+  background: linear-gradient(to right, #0056b3, #003a70);
+}

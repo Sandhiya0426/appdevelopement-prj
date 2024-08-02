@@ -1,0 +1,92 @@
+.settings-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.settings-container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.settings-container p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.settings-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.settings-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.settings-form .form-group {
+  margin-bottom: 15px;
+}
+
+.settings-form .form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.settings-form .form-group input,
+.settings-form .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.settings-form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.settings-form button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .settings-container {
+      padding: 10px;
+  }
+
+  .settings-section {
+      padding: 15px;
+  }
+
+  .settings-form .form-group label {
+      font-size: 14px;
+  }
+
+  .settings-form .form-group input,
+  .settings-form .form-group select {
+      font-size: 14px;
+  }
+
+  .settings-form button {
+      padding: 8px 16px;
+  }
+}

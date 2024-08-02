@@ -1,4 +1,3 @@
-// src/components/Card.js
 import React, { useState } from 'react';
 import Booking from './Booking';
 import '../assets/styles/Card.css';
@@ -15,8 +14,9 @@ const Card = ({ title, text, imageUrl }) => {
       <div className="card-body">
         <h3 className="card-title">{title}</h3>
         <p className="card-text">{text}</p>
-        <button className="card-button" onClick={openModal}>BOOK NOW</button>
+        {/* <button className="card-button" onClick={openModal}>Book Now</button> */}
       </div>
+      {/* Render Booking component as a modal */}
       <Booking isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );

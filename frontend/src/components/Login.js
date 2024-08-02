@@ -60,6 +60,7 @@ function Login() {
     };
 
     return (
+      
         <div className="login-container">
 
             <h1>Login</h1>
@@ -92,7 +93,7 @@ function Login() {
                 Don't have an account? <Link to="/register">Register</Link>
             </p>
             </div>
-    
+          
      
     );
 }

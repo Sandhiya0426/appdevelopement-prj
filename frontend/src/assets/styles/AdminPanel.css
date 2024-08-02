@@ -1,50 +1,52 @@
-/* src/assets/styles/AdminPanel.css */
-
 .admin-panel {
   display: flex;
   height: 100vh;
   font-family: Arial, sans-serif;
-  background-color: white;
 }
 
-.sidebar {
+/* Sidebar Styles */
+.sidebarA {
   width: 250px;
-  background-color: #1c1717;
-  color: #f9f0f0;
+  background-color: #34495e; /* Dark blue-gray for a modern look */
+  color: #ecf0f1; /* Light text color for better contrast */
   padding: 20px;
-  box-sizing: border-box;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar ul {
-  list-style: none;
+.sidebarA ul {
+  list-style-type: none;
   padding: 0;
 }
 
-.sidebar ul li {
-  padding: 10px;
-  margin: 10px 0;
-  background-color: #fff0f0;
-  text-align: center;
-  cursor: pointer;
+.sidebarA ul li {
+  margin: 15px 0;
 }
 
-.sidebar ul li:hover {
-  background-color: #130f0f;
-}
-
-.sidebar a {
-  color: rgb(32, 16, 16);
+.sidebarA ul li a {
+  color: #ecf0f1; /* Light text color for links */
   text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
 }
 
+.sidebarA ul li a:hover {
+  background-color: #435891; /* Teal color for hover effect */
+  color: #ffffff; /* White text color on hover */
+}
+
+/* Content Styles */
 .content {
-  flex-grow: 1;
+  flex: 1;
   padding: 20px;
-  box-sizing: border-box;
+  overflow-y: auto;
+  background-color: #f4f4f4; /* Light gray background for the content area */
 }
 
 .content h2 {
-  margin-bottom: 20px;
+  margin-top: 0;
+  color: #2c3e50; /* Darker text color for headings */
 }
 
 table {
@@ -54,29 +56,34 @@ table {
 }
 
 table, th, td {
-  border: 1px solid #090808;
-  color:#eddada
+  border: 1px solid #ddd;
 }
 
 th, td {
-  padding: 8px;
+  padding: 12px;
   text-align: left;
- background-color: #eddada;
- color: #090808;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #3498db; /* Blue background for table headers */
+  color: #ffffff; /* White text color for table headers */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ecf0f1; /* Light gray background for even rows */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White background for odd rows */
 }
 
 ul {
-  list-style: none;
   padding: 0;
+  list-style-type: none;
 }
 
 ul li {
-  padding: 10px;
-  margin: 10px 0;
-  background-color: #eddada;
-  text-align: left;
+  margin: 5px 0;
+  font-size: 16px;
+  color: #2c3e50; /* Darker text color for list items */
 }

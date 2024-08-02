@@ -1,11 +1,11 @@
-/* Login.css */
 body{
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: url('C:\Users\sandh\Downloads\login-.jpeg') no-repeat center center fixed; 
-    background-size: cover;
-} 
+    background : url('C:\Users\sandh\Downloads\login-.jpeg') no-repeat center center fixed ; 
+    /* margin-bottom: 100%; */
+    background-size: cover
+}
 
 .login-container {
     max-width: 400px;

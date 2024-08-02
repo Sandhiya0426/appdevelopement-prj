@@ -10,10 +10,10 @@ const Footer = () => {
         <div className="footer-section about">
           <h1 className="logo-text">V3-Events</h1>
           <p>
-            We provide the best solutions for your fitness and health goals. Connect with us on our social media platforms or reach out to us directly via email or phone.
+          We specialize in creating unforgettable experiences for every occasion. Whether it’s weddings, corporate events, or birthday celebrations, connect with us to bring your event vision to life. Reach out via social media or contact us directly for personalized event planning services.
           </p>
           <div className="contact">
-            <FaEnvelope /> &nbsp; email@yourcompany.com
+            <FaEnvelope /> &nbsp; v3events@gmail.com
           </div>
           <div className="contact">
             <FaPhone /> &nbsp; +123 456 7890
