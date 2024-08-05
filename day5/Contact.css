@@ -1,0 +1,74 @@
+.contact-container {
+    max-width: 500px; /* Reduce the maximum width */
+    margin: 20px auto; /* Center the container and reduce the margin */
+    padding: 1rem; /* Reduce padding */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .contact-header {
+    text-align: center;
+    margin-bottom: 1.5rem; /* Reduce bottom margin */
+  }
+  
+  .contact-header h1 {
+    font-size: 2rem; /* Reduce font size */
+    color: #333;
+  }
+  
+  .contact-header p {
+    color: #666;
+    font-size: 0.9rem; /* Reduce font size */
+  }
+  
+  .contact-form-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-form {
+    width: 100%;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem; /* Reduce margin */
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.6rem; /* Reduce padding */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem; /* Reduce font size */
+  }
+  
+  .form-group textarea {
+    height: 120px; /* Reduce height */
+    resize: vertical;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem; /* Reduce padding */
+    border-radius: 4px;
+    font-size: 0.9rem; /* Reduce font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

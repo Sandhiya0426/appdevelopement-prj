@@ -1,0 +1,48 @@
+/* src/assets/styles/Card.css */
+.card {
+    width: 300px; /* Card width */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    margin: 20px; /* Space around the card */
+    background-color: #ffffff; /* Card background color */
+    text-align: center; /* Center text inside card */
+  }
+  
+  .card-img {
+    width: 100%; /* Full width of the card */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Cover the card area */
+  }
+  
+  .card-body {
+    padding: 15px; /* Padding inside the card */
+  }
+  
+  .card-title {
+    font-size: 1.5em; /* Title font size */
+    color: #2c3e50; /* Title color */
+    margin-bottom: 10px; /* Space below the title */
+  }
+  
+  .card-text {
+    font-size: 1em; /* Text font size */
+    color: #34495e; /* Text color */
+    margin-bottom: 15px; /* Space below the text */
+  }
+  
+  .card-button {
+    background-color: #2c3e50; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .card-button:hover {
+    background-color: #34495e; /* Darker background on hover */
+  }
+  

@@ -1,0 +1,38 @@
+.account-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.account-header {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.account-details {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.account-details label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.account-button {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.account-button:hover {
+    background-color: #2980b9;
+}

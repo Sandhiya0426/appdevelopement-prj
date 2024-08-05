@@ -1,0 +1,33 @@
+.help-container {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.help-header {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.help-articles {
+    display: flex;
+    flex-direction: column;
+}
+
+.help-article {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.help-article h4 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+.help-article p {
+    margin: 5px 0;
+    color: #7f8c8d;
+}

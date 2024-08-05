@@ -1,0 +1,147 @@
+.manage-events-container {
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh; /* Ensures the container takes up full height */
+}
+
+.manage-events-container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.manage-events-container p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.add-event-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.add-event-btn:hover {
+  background-color: #45a049;
+}
+
+.event-stats, .event-categories, .recent-activities, .event-list {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.event-stats h2, .event-categories h2, .recent-activities h2, .event-list h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+  min-width: 200px; /* Ensures cards have a minimum width */
+}
+
+.stat-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.stat-card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.event-categories ul, .recent-activities ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event-categories ul li, .recent-activities ul li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.event-categories ul li, .recent-activities ul li p {
+  margin: 0;
+  color: #555;
+}
+
+.event-list .event-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.event-list .event-item:last-child {
+  border-bottom: none;
+}
+
+.event-details h3 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.event-details p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.event-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.event-actions button {
+  padding: 5px 10px;
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.event-actions button:hover {
+  background-color: #1976D2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .manage-events-container {
+      padding: 10px;
+  }
+
+  .event-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .event-actions {
+      flex-direction: column;
+  }
+}
