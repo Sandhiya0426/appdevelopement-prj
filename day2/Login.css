@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background : url('C:\Users\sandh\Downloads\login-.jpeg') no-repeat center center fixed ; 
+    /* margin-bottom: 100%; */
+    background-size: cover
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  
+    background-color: rgba(249, 249, 249, 0.9); /* Semi-transparent background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+}
+
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial, sans-serif';
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-container input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-container .error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.login-container .message {
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+    font-size: 16px;
+}
+
+.login-container button {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #555;
+}
