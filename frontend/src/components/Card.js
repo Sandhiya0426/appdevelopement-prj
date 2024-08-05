@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Booking from './Booking';
 import '../assets/styles/Card.css';
 
 const Card = ({ title, text, imageUrl }) => {
@@ -17,7 +16,7 @@ const Card = ({ title, text, imageUrl }) => {
         {/* <button className="card-button" onClick={openModal}>Book Now</button> */}
       </div>
       {/* Render Booking component as a modal */}
-      <Booking isOpen={isModalOpen} onClose={closeModal} />
+      {/* <Booking isOpen={isModalOpen} onClose={closeModal} /> */}
     </div>
   );
 };

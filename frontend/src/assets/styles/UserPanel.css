@@ -1,27 +1,33 @@
-/* src/assets/styles/UserPanel.css */
 .user-panel {
     display: flex;
-    background-color: white;
+    background-color: #f4f4f4;
+    height: 100vh;
 }
 
-.sidebar {
+.sidebaruser {
     width: 20%;
-    background-color: #625e5e;
+    background-color: #2c3e50;
     padding: 20px;
+    color: #ecf0f1;
 }
 
-.sidebar ul {
+.sidebaruser ul {
     list-style-type: none;
     padding: 0;
 }
 
-.sidebar li {
+.sidebaruser li {
     margin: 10px 0;
 }
 
-.sidebar a {
+.sidebaruser a {
     text-decoration: none;
-    color: #f08d8d;
+    color: #ecf0f1;
+    font-weight: bold;
+}
+
+.sidebaruser a:hover {
+    color: #3498db;
 }
 
 .content {
@@ -31,13 +37,27 @@
 
 .content h2 {
     margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c3e50;
 }
 
 .content h3 {
     margin-top: 30px;
+    font-size: 20px;
+    color: #2c3e50;
 }
 
 .content ul {
     list-style-type: disc;
-    margin-left: 20px; /* Add margin-left to indent the list items */
+    margin-left: 20px;
+}
+
+.content li {
+    margin-bottom: 10px;
+}
+
+.content p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #7f8c8d;
 }

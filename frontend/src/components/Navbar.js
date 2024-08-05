@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Navbar.css';
+import { FaShoppingCart } from 'react-icons/fa';
 
-function Navbar() {
+function Navbar({ cartCount }) { // Accept cartCount as a prop
     return (
         <nav className="navbar">
             <div className="navbar-logo">
@@ -10,11 +11,15 @@ function Navbar() {
             </div>
             <div className="navbar-links">
                 <Link to="/">Home</Link>
-                 <Link to="/Login">Login</Link>
-                 <Link to="/Register">Register</Link>
-                 {/* <li><Link to="/admin/dashboard">Admin Panel</Link></li> */}
+                <Link to="/login">Login</Link>
+                <Link to="/register">Register</Link>
                 <Link to="/services">Services</Link>
                 <Link to="/contact">Contact</Link>
+                <Link to="/listofcompanies">List of Companies</Link>
+                <Link to="/cart" className="cart-icon">
+                    <FaShoppingCart size={24} />
+                    {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+                </Link>
             </div>
         </nav>
     );

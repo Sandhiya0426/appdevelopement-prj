@@ -43,7 +43,7 @@ function Home() {
            <Card
             title="Sports Event Management"
             text="Manage your sports events with professional planning and execution."
-            imageUrl={sportsEventImage} // Add this line
+            imageUrl={sportsEventImage} 
           />
             <Card
             title="Celebrity Events"
@@ -51,7 +51,7 @@ function Home() {
             imageUrl={celebrityImage}
           />
             </div>
-            <Footer /> {/* Add the Footer component */}
+            <Footer /> 
         </div>
     </div>
   );

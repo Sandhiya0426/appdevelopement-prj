@@ -1,69 +1,72 @@
-// src/components/PaymentPage.js
 import React, { useState } from 'react';
-import { loadStripe } from '@stripe/stripe-js';
-import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
-
-const stripePromise = loadStripe('your-publishable-key-here');
-
-const PaymentForm = () => {
-  const stripe = useStripe();
-  const elements = useElements();
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!stripe || !elements) {
-      return;
-    }
-
-    const cardElement = elements.getElement(CardElement);
-
-    const { error, paymentMethod } = await stripe.createPaymentMethod({
-      type: 'card',
-      card: cardElement,
-      billing_details: {
-        email: email,
-      },
-    });
-
-    if (error) {
-      console.error(error);
-    } else {
-      console.log('PaymentMethod:', paymentMethod);
-      // Process the payment or handle it on the backend
-    }
-  };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Email</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </div>
-      <div>
-        <label>Card Details</label>
-        <CardElement />
-      </div>
-      <button type="submit" disabled={!stripe}>Pay Now</button>
-    </form>
-  );
-};
-
+import { useNavigate } from 'react-router-dom';
+import '../assets/styles/PaymentPage.css';
+import { Link } from 'react-router-dom';
 const PaymentPage = () => {
-  return (
-    <Elements stripe={stripePromise}>
-      <div>
-        <h2>Payment Page</h2>
-        <PaymentForm />
-      </div>
-    </Elements>
-  );
+    const [paymentDetails, setPaymentDetails] = useState({
+        cardNumber: '',
+        expiryDate: '',
+        cvv: ''
+    });
+    const navigate = useNavigate();
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setPaymentDetails(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Simulate payment completion
+        navigate('/payment-successfull');
+    };
+
+    return (
+        <div className="payment-page">
+            <div className="payment-container">
+                <div className="payment-image"></div>
+                <div className="payment-form">
+                    <h1>Payment Details</h1>
+                    <form onSubmit={handleSubmit}>
+                        <label>
+                            Card Number:
+                            <input
+                                type="text"
+                                name="cardNumber"
+                                value={paymentDetails.cardNumber}
+                                onChange={handleChange}
+                                required
+                            />
+                        </label>
+                        <label>
+                            Expiry Date:
+                            <input
+                                type="text"
+                                name="expiryDate"
+                                value={paymentDetails.expiryDate}
+                                onChange={handleChange}
+                                required
+                            />
+                        </label>
+                        <label>
+                            CVV:
+                            <input
+                                type="text"
+                                name="cvv"
+                                value={paymentDetails.cvv}
+                                onChange={handleChange}
+                                required
+                            />
+                        </label>
+                      <Link to="/paymentsuccessfull"> <button type="submit">Complete Payment</button></Link>
+                    </form>
+                </div>
+            </div>
+        </div>
+    );
 };
 
 export default PaymentPage;

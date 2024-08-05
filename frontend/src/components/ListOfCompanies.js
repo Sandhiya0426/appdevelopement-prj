@@ -1,7 +1,7 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../assets/styles/ListOfCompanies.css';
 
-// Importing local images
 import pxl11 from '../assets/images/pxl11.jpg';
 import pxl2 from '../assets/images/pxl2.jpg';
 import pxl3 from '../assets/images/pxl3.jpg';
@@ -87,7 +87,13 @@ const companiesData = [
   },
 ];
 
-const ListOfCompanies = () => {
+const ListOfCompanies = ({ addToCart }) => {
+  const navigate = useNavigate(); 
+
+  const handleBookNow = () => {
+    navigate('/booking'); // Navigate to the Booking page
+  };
+  
   return (
     <div className="list-of-companies">
       <h1>Discover Our Event Partners</h1>
@@ -100,7 +106,10 @@ const ListOfCompanies = () => {
             <p><strong>Contact:</strong> {company.contact}</p>
             <p><strong>Phone:</strong> {company.phone}</p>
             <p>{company.quote}</p>
-            <button className="book-now-button">Book Now</button> {/* Updated text */}
+            <div className="button-container">
+              <button className="book-now-button" onClick={handleBookNow}>Book Now</button>
+              <button className="add-to-cart-button" onClick={() => addToCart(company)}>Add to Cart</button>
+            </div>
           </div>
         ))}
       </div>
